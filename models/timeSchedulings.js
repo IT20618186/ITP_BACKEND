@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 
-const materialSchema = new mongoose.Schema({
+const timeSchedulingSchema = new mongoose.Schema({
 
     contractID:{
         type:String,
         required:true
     },
-    materialID:{
+    processID:{
         type:String,
         required:true
     },
-    materialType:{
+    division:{
         type:String,
         required:true
     },
-    quantity:{
+    progress:{
         type:Number,
         required:true
     },
-    price:{
-        type:Number,
+    dateUpdated:{
+        type:String,
         required:true
     }
 
 });
 
-module.exports = mongoose.model('Materials',materialSchema);
+module.exports = mongoose.model('TimeSchedulings',timeSchedulingSchema);

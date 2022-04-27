@@ -6,14 +6,16 @@ const router = express.Router();
 
 // Save Materials
 
-router.post('/material/save',(res,req) => {
+router.post('/material/save',(req,res) => {
 
+    const contractID = req.body.contractID;
     const materialID = req.body.materialID;
     const materialType = req.body.materialType;
     const quantity = Number(req.body.quantity);
     const price = Number(req.body.price);
 
     const newMaterial = new Materials({
+        contractID,
         materialID,
         materialType,
         quantity,
@@ -98,12 +100,12 @@ router.delete('/material/delete/:id', (req,res)=>{
     Materials.findByIdAndRemove(req.params.id).exec((err, deletedMaterial)=>{
         if (err) {
             return res.status(400).json({
-                message: "Delete Unsuccessful.",
+                message: "Delete Unsuccessfully.",
                 err
             });
         }
         return res.status(200).json({
-            message: "Delete Successful.",
+            message: "Delete Successfully.",
             deletedMaterial
         });
     });
