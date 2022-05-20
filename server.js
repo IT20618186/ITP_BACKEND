@@ -31,7 +31,7 @@ app.use(materialRoutes);
 
 
 const PORT = 8000;
-const DB_URL = 'mongodb+srv://SkylineConstruction:skyline8@skyline.ymebi.mongodb.net/Skyline_DB?retryWrites=true&w=majority'
+const DB_URL = 'mongodb+srv://user:skyline8@skyline.ymebi.mongodb.net/Skyline_DB?retryWrites=true&w=majority'
 
 
 mongoose.connect(DB_URL,{
