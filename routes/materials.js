@@ -73,7 +73,7 @@ router.get('/material/:id', (req,res) => {
 
 //Update Material's details
 
-router.put('/material/update/:id', (req,res)=>{
+router.patch('/material/update/:id', (req,res)=>{
 
     Materials.findByIdAndUpdate(
         req.params.id, {

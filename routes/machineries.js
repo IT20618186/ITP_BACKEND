@@ -74,7 +74,7 @@ router.get('/machinery/:id', (req,res) => {
 
 //Update Machinery's details
 
-router.put('/machinery/update/:id', (req,res)=>{
+router.patch('/machinery/update/:id', (req,res)=>{
 
     Machineries.findByIdAndUpdate(
         req.params.id, {

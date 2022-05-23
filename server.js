@@ -8,11 +8,8 @@ const app = express();
 
 //import routes
 const machineryRoutes = require('./routes/machineries');
-const timeSchedulingRoutes = require('./routes/timeSchedulings');
 const materialRoutes = require('./routes/materials');
-//const crewRoutes = require('./routes/crews');
-//const salaryRoutes = require('./routes/salaries');
-//const architectRoutes = require('./routes/architects');
+
 
 
 //app middleware
@@ -22,11 +19,8 @@ app.use(cors());
 
 //route middleware
 app.use(machineryRoutes);
-app.use(timeSchedulingRoutes);
 app.use(materialRoutes);
-//app.use(crewRoutes);
-//app.use(salaryRoutes);
-//app.use(architectRoutes);
+
 
 
 
